@@ -16,5 +16,5 @@ func main() {
         fmt.Printf("oh no: %v", err)
         os.Exit(1)
     }
-    fmt.Printf("I have a nice new hat: %+v", hat)
+    fmt.Printf("I have a nice new hat: %+v\n", hat)
 }
