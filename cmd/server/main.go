@@ -1,15 +1,15 @@
 package main
 
 import (
-    "net/http"
+	"net/http"
 
-    "gitlab.com/yukung/hello-twirp/internal/haberdasherserver"
-    "gitlab.com/yukung/hello-twirp/rpc/haberdasher"
+	"github.com/yusuiked/hello-twirp/internal/haberdasherserver"
+	"github.com/yusuiked/hello-twirp/rpc/haberdasher"
 )
 
 func main() {
-    server := &haberdasherserver.Server{}
-    twirpHandler := haberdasher.NewHaberdasherServer(server)
+	server := &haberdasherserver.Server{}
+	twirpHandler := haberdasher.NewHaberdasherServer(server)
 
-    http.ListenAndServe(":8080", twirpHandler)
+	http.ListenAndServe(":8080", twirpHandler)
 }
